@@ -1,0 +1,153 @@
+:root {
+    --background-page: #FAFAF9;
+    --background-card: #FFFFFF;
+    --gold: #F5C044;
+    --green: #4CA154;
+    --black: #18181B;
+    --dark-gray: #52525A;
+    --light-gray: #D4D4D8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Sora;
+}
+
+body {
+    background-color: var(--background-page);
+    display: flex;
+    justify-content: center;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 32px;
+    margin: 162px auto;
+    max-width: 1136px;
+    .left {
+        width: 1fr;
+        color: var(--black);
+        .main-star {
+            padding: 0.4rem;
+            display: inline-block;
+            font-size: 24px;
+            border-radius: 50%;
+            background-color: var(--gold);
+            margin: 0 0 16px 0;
+        }
+        .left-text {
+            .headline{
+                color: var(--black);
+                font-size: 36px;
+                margin: 0 0 12px 0;
+            }
+            .paragraph {
+                color: var(--dark-gray);
+                font-size: 20px;
+                line-height: 1.6;
+                margin: 0 0 32px 0;
+            }
+
+        }
+        .left-list {
+            font-size: 14px;
+            color: var(--dark-gray);
+            display: flex;
+            flex-direction: column;
+            & li {
+                display: flex;
+                align-items: center;
+                list-style: none;
+                margin: 0 0 12px 0;
+                & img {
+                    margin: 0 8px 0 0;
+                }
+            }
+        }
+    }
+    
+    .right {
+        width: 1fr;
+        .card-google {
+            background-color: var(--background-card);
+            padding: 28px 40px;
+            margin-top: 10px;
+            margin-bottom: 40px;
+            border-radius: 15px;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.025);
+            width: 65%;
+            transform: translateX(55%);
+            .rating-grid {
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                column-gap: 20px;
+                .company-logo {
+                    width: 100%;
+                    padding: 0 0 16px 0;
+                }
+                .star-row {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+                    column-gap: 4px;
+                    vertical-align: top;
+                    list-style: none;
+                }
+            }
+            .card-author {
+                font-size: 16px;
+                padding-bottom: 8px;
+            }
+            .card-quote {
+                line-height: 1.6;
+            }
+        }
+        
+        .card-meta {
+            background-color: var(--background-card);
+            padding: 28px 40px;
+            margin-bottom: 40px;
+            border-radius: 15px;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.025);
+            width: 65%;
+            .rating-grid {
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                column-gap: 20px;
+                .company-logo {
+                    transform: translateY(-10%);
+                    width: 100%;
+                    padding: 0 0 16px 0;
+                }
+                .star-row {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+                    column-gap: 4px;
+                    vertical-align: top;
+                    list-style: none;
+                }
+            }
+            .card-author {
+                font-size: 16px;
+                padding-bottom: 8px;
+            }
+            .card-quote {
+                line-height: 1.6;
+            }
+        }
+
+    }
+    
+}
+
+@media only screen and (max-width: 640px) {
+    .main-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 32PX;
+        margin: 81px 0;
+        max-width: 568px;
+    }
+}
